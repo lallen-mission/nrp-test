@@ -1,0 +1,11 @@
+services:
+  nginx:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOMAIN=localhost.local
+      - ENVIRONMENT=dev
+      - PROTO=http
+    ports: 
+      - 8080:80
